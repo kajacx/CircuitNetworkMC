@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package cz.kajacx.circuitnetworkmc;
 
 import org.slf4j.Logger;
 
