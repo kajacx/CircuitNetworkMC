@@ -18,7 +18,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-
+import cz.kajacx.circuitnetworkmc.block.ModBlocks;
 import cz.kajacx.circuitnetworkmc.item.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -43,6 +43,7 @@ public class CircuitNetworkMC {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -61,6 +62,7 @@ public class CircuitNetworkMC {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModItems.CIRCUIT_WIRES);
+            event.accept(ModBlocks.CONSTANT_COMBINATOR_BLOCK);
         }
     }
 

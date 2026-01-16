@@ -3,5 +3,7 @@
   "item.circuitnetworkmc.circuit_wires": "Circuit wires",
   "item.circuitnetworkmc.circuit_wires_red": "Circuit wires (red)",
   "item.circuitnetworkmc.circuit_wires_green": "Circuit wires (green)",
+  "block.circuitnetworkmc.constant_combinator": "Constant combinator",
+  "block.circuitnetworkmc.constant_combinator_description": "A combinator that outputs constant signals.",
   "_trailing": ""
 }
