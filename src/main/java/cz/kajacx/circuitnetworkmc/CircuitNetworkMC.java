@@ -19,6 +19,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import cz.kajacx.circuitnetworkmc.block.ModBlocks;
+import cz.kajacx.circuitnetworkmc.item.CreativeTabs;
 import cz.kajacx.circuitnetworkmc.item.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -41,6 +42,8 @@ public class CircuitNetworkMC {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in
         // this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        CreativeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

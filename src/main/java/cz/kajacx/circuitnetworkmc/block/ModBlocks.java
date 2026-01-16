@@ -23,14 +23,14 @@ public class ModBlocks {
     public static final @Nonnull DeferredBlock<Block> CONSTANT_COMBINATOR_BLOCK = registerBlock(
             CONSTANT_COMBINATOR_BLOCK_NAME, () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
 
-    public static void register(@Nonnull IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
-
     private static <T extends Block> DeferredBlock<T> registerBlock(@Nonnull String name,
             @Nonnull Supplier<T> blockSupplier) {
         var block = BLOCKS.register(name, blockSupplier);
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
+    }
+
+    public static void register(@Nonnull IEventBus eventBus) {
+        BLOCKS.register(eventBus);
     }
 }
