@@ -21,7 +21,8 @@ public class ModBlocks {
     public static final String CONSTANT_COMBINATOR_BLOCK_NAME = "constant_combinator";
     @SuppressWarnings("null")
     public static final @Nonnull DeferredBlock<Block> CONSTANT_COMBINATOR_BLOCK = registerBlock(
-            CONSTANT_COMBINATOR_BLOCK_NAME, () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.LANTERN)));
+            CONSTANT_COMBINATOR_BLOCK_NAME,
+            () -> new Block(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.LANTERN)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(@Nonnull String name,
             @Nonnull Supplier<T> blockSupplier) {
