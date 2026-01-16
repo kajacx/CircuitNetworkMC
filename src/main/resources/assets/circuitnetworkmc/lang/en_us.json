@@ -1,0 +1,7 @@
+{
+  "itemGroup.circuitnetworkmc": "Example Mod Tab",
+  "item.circuitnetworkmc.circuit_wires": "Circuit wires",
+  "item.circuitnetworkmc.circuit_wires_red": "Circuit wires (red)",
+  "item.circuitnetworkmc.circuit_wires_green": "Circuit wires (green)",
+  "_trailing": ""
+}
