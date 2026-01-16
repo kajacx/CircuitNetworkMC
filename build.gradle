@@ -184,3 +184,23 @@ idea {
         downloadJavadoc = true
     }
 }
+
+// Task to run the fix-transparency script
+tasks.register("fixTransparency", Exec) {
+    description = "Fixes transparency in PNG files using ImageMagick"
+    group = "build"
+    
+    workingDir = file("src/main/resources/assets/circuitnetworkmc/textures/item")
+    
+    // Use the appropriate shell command based on the OS
+    if (System.getProperty("os.name").toLowerCase().contains("win")) {
+        commandLine "cmd", "/c", "fix-transparency.sh"
+    } else {
+        commandLine "sh", "fix-transparency.sh"
+    }
+}
+
+// Make fixTransparency run before processResources so textures are updated before being packaged
+tasks.named("processResources") {
+    dependsOn "fixTransparency"
+}
