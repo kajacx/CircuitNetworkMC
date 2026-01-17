@@ -14,7 +14,7 @@ public class ModItems {
     public static final String CIRCUIT_WIRES_ITEM_NAME = "circuit_wires";
     @SuppressWarnings("null")
     public static final @Nonnull DeferredItem<Item> CIRCUIT_WIRES = ITEMS.register(CIRCUIT_WIRES_ITEM_NAME,
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new CircuitWiresItem());
 
     public static void register(@Nonnull IEventBus eventBus) {
         ITEMS.register(eventBus);
