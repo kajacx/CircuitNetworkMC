@@ -20,6 +20,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import cz.kajacx.circuitnetworkmc.block.ModBlocks;
 import cz.kajacx.circuitnetworkmc.item.CreativeTabs;
 import cz.kajacx.circuitnetworkmc.item.ModItems;
+import cz.kajacx.circuitnetworkmc.item.circuitwires.CircuitWiresData;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CircuitNetworkMC.MOD_ID)
@@ -46,6 +47,7 @@ public class CircuitNetworkMC {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        CircuitWiresData.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

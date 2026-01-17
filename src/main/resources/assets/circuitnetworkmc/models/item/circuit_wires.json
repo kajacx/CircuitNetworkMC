@@ -1,6 +1,16 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "circuitnetworkmc:item/circuit_wires"
-  }
+    "layer0": "circuitnetworkmc:item/circuit_wires_red"
+  },
+  "overrides": [
+    {
+      "predicate": { "circuitnetworkmc:wire_color": 0 },
+      "model": "circuitnetworkmc:item/circuit_wires_red"
+    },
+    {
+      "predicate": { "circuitnetworkmc:wire_color": 1 },
+      "model": "circuitnetworkmc:item/circuit_wires_green"
+    }
+  ]
 }

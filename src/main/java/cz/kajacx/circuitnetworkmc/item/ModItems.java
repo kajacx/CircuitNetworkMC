@@ -3,6 +3,7 @@ package cz.kajacx.circuitnetworkmc.item;
 import javax.annotation.Nonnull;
 
 import cz.kajacx.circuitnetworkmc.CircuitNetworkMC;
+import cz.kajacx.circuitnetworkmc.item.circuitwires.CircuitWiresItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
