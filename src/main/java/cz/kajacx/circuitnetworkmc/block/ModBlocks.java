@@ -24,6 +24,7 @@ public class ModBlocks {
             CONSTANT_COMBINATOR_BLOCK_NAME,
             () -> new Block(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.LANTERN)));
 
+    @SuppressWarnings("null")
     private static <T extends Block> DeferredBlock<T> registerBlock(@Nonnull String name,
             @Nonnull Supplier<T> blockSupplier) {
         var block = BLOCKS.register(name, blockSupplier);
